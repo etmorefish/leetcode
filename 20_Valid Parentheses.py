@@ -11,7 +11,7 @@ class Solution:
             s = s.replace('{}', '')
             s = s.replace('[]', '')
             s = s.replace('()', '')
-        return s == ''
+        return True
 
 
 '''
@@ -49,6 +49,3 @@ class Solution:
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 '''
 
-if __name__ == '__main__':
-    a = Solution()
-    a.isValid('{}')
