@@ -12,7 +12,20 @@ class Solution:
             s = s.replace('[]', '')
             s = s.replace('()', '')
         return True
+    def isValid2(self, s):
+        stack = []
+        mapping = {")": "(", "}": "{", "]": "["}
+        for char in mapping:
+            top = stack.pop() if stack else '#'
+            if mapping[char] != top:
+                return False
+            else:
+                stack.append(char)
+            return not stack
 
+if __name__ == '__main__':
+    a = Solution()
+    a.isValid2("()[]{}")
 
 '''
 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -22,6 +35,24 @@ class Solution:
 左括号必须用相同类型的右括号闭合。
 左括号必须以正确的顺序闭合。
 注意空字符串可被认为是有效字符串。
+
+class Solution(object):
+    def middleNode(self, head):
+        A = [head]
+        while A[-1].next:
+            A.append(A[-1].next)
+        return A[len(A) / 2]
+
+class Solution(object):
+    def middleNode(self, head):
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
+
+
+
 
 示例 1:
 
