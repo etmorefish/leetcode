@@ -16,3 +16,11 @@ class Solution(object):
             if j in map:
                 result.append(j)
         return result
+
+
+if __name__ == '__main__':
+    l1 = [1, 2,3 ,4,5,7,8]
+    l2 = [1,8, 12 , 21]
+    res = Solution()
+    r = res.intersection(l1, l2)
+    print(r)
