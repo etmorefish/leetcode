@@ -27,6 +27,7 @@ def binary_search(li, val):
             left = mid + 1
     else:
         return None
+        
 
 # li = [1,2,3,4,5,6,7,8,9]
 li = list(range(10000))
