@@ -91,3 +91,33 @@ if __name__ == '__main__':
 
     quickSort(arr, 0, 5)
     print(arr)
+
+
+
+#  二分查找   
+def birnary_search(li, val):
+    l, r = 0 , len(li)-1
+    while r > l:
+        mid = (l+r)//2
+        if li[mid] == val:
+            return mid
+        elif li[mid] > val:
+            r = mid -1
+        else:
+            l = mid +1
+    else:
+        return None
+
+# 装饰器   代码运行时间
+import time
+
+def run_time(func):
+    def wrapper(*args, **kwargs):
+        t1 = time.time()
+        res = func(*args, **kwargs)
+        t2 = time.time()
+        print('%s running %ss'%(func.__name__, t2-t1))
+        return res
+    return wrapper
+
+    
