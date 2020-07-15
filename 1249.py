@@ -20,12 +20,12 @@ class Solution:
         count = stack+remove
         count.sort()
         count.reverse()
-        # print(count)
+        print(count)
         sl = list(s)
         for i in count:
             sl.pop(i)
 
-        # print(''.join(sl))
+        print(''.join(sl))
         return ''.join(sl)
 
 
@@ -34,4 +34,4 @@ if __name__ == '__main__':
     s = "l)ee(t(c)o)de)"
     s1 = ')))(((('
     a = Solution()
-    a.minRemoveToMakeValid(s1)
+    a.minRemoveToMakeValid(s)
