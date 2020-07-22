@@ -7,7 +7,7 @@ class Solution:
                 # print('ok')
             if typed[i] == name[j]:
                 j += 1
-        # return False
+        return False
         print('error')
 
 
