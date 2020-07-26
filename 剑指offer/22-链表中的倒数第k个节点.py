@@ -21,3 +21,15 @@ class Solution:
             sencondPoint = sencondPoint.next
             firstPoint = firstPoint.next
         return sencondPoint
+
+class Solution:
+#     解题思路
+# 1.遍历链表，将节点存入列表中
+# 2.返回第-k个节点即可
+    def getKthFromEnd(self, head: ListNode, k: int) -> ListNode:
+        res = []
+        while head:
+            res.append(head)
+            head = head.next
+        return res[-k]
+

@@ -22,8 +22,21 @@ class Solution:
         pTmp = listNode
         while pTmp:
             ret.insert(0, pTmp.val)
+            # ret.append(pTmp.val)
             pTmp = pTmp.next
-        return ret
+        return ret  
+        # return ret[::-1]
+
+# 递归
+class Solution:
+    def reversePrint(self, head: ListNode) -> List[int]:
+        if head is None:
+            return []
+        res = self.reversePrint(head.next)
+        res.append(head.val)
+        return res
+
+
 
 
 l1 = ListNode(1)

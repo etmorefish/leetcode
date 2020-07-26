@@ -12,6 +12,21 @@ class Solution:
             return False
 
     # 从右上角往左下角找
+    def Find(self, target, array):
+        row_count = len(array)
+        column_count = len(array[0])
+        i = 0
+        j = column_count-1
+        while i < row_count  and j >=0:
+            values = array[i][j]
+            if values == target:
+                return True
+            elif values > target:
+                j -= 1
+            else:
+                i += 1
+        return False
+
     def find(self, target, array):  # O(n)
         if array == [] or array == [[]]:
             return False
@@ -19,7 +34,7 @@ class Solution:
         column_count = len(array[0])
         i = 0
         j = column_count-1
-        while i < row_count and j > 0:
+        while i < row_count and j >= 0:
             values = array[i][j]
             if values == target:
                 return True
@@ -30,7 +45,7 @@ class Solution:
         return False
 
 
-    def findNumberIn2DArray(self, matrix, target: int) -> bool:
+    def findNumberIn2DArray(self, matrix, target: int) -> bool: # O(n)
         for i in range(len(matrix)):
             if target in matrix[i]:
                 return True
