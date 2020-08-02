@@ -33,8 +33,8 @@ class Solution(object):
             j = hashmap.get(target - num)
             print('j:', j)
             if j is not None and i != j:
-                # return [i, j]
-                print( [i, j])
+                return [i, j]
+                # print( [i, j])
 
 
 s = Solution()

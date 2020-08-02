@@ -1,5 +1,7 @@
 from collections import deque
+"""
 
+"""
 # 节点定义
 class BiTreeNode:
     def __init__(self, data):
@@ -24,28 +26,28 @@ g.rchild = f
 
 root = e
 
-# 前序遍历  E,A,C,B,D,G,F
+# 前序遍历  E,A,C,B,D,G,F  根、左、右
 def pre_order(root):
     if root:
         print(root.data, end=',')
         pre_order(root.lchild)
         pre_order(root.rchild)
 
-# 中序遍历  A,B,C,D,E,G,F
+# 中序遍历  A,B,C,D,E,G,F   左、根、右
 def mid_order(root):
     if root:
         mid_order(root.lchild)
         print(root.data, end=',')
         mid_order(root.rchild)
 
-# 后序遍历  B,D,C,A,F,G,E
+# 后序遍历  B,D,C,A,F,G,E   左、右、根
 def bck_order(root):
     if root:
         bck_order(root.lchild)
         bck_order(root.rchild)
         print(root.data, end=',')
 
-# 层次遍历  E,A,G,C,F,B,D
+# 层次遍历  E,A,G,C,F,B,D   根
 def level_order(root):
     queue = deque()
     queue.append(root)
