@@ -20,5 +20,5 @@ class Solution:
             n >>= 1
         return res
 s = Solution()
-print(s.myPow(2.0, 10))
-print(s.myPow(2.0, -10))
+print(s.myPow(2.0000000, 10))
+# print(s.myPow(2.0, -10))

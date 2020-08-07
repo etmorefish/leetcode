@@ -13,7 +13,7 @@ class Solution:
         firstPoint = head
         sencondPoint = head
         for i in range(k):
-            if firstPoint == None:
+            if firstPoint == None:  # 考虑越界
                 return None
             firstPoint = firstPoint.next
         
