@@ -2,7 +2,7 @@
 
 class Solution:
     def Fibonacci(self, n):
-        r =[]
+        r = []
         if n == 0:
             # return 0
             r.append(0)
@@ -17,7 +17,7 @@ class Solution:
             a = 0
             b = 1
             ret = 0
-            for i in range(1, n-1):
+            for i in range( n - 1):
                 ret = a + b
                 r.append(ret)
                 a = b
@@ -26,6 +26,26 @@ class Solution:
             # return ret
         return None
 
+# 动态规划
+    def f2(self, n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a % 1000000007
+
+    def f3(self, n):
+        if n > 1:
+            a = 0
+            b = 1
+            for i in range(n - 1):
+                ret = a + b
+                a = b
+                b = ret
+            return ret % 1000000007
+
 
 s = Solution()
-print(s.Fibonacci(50))
+print(s.Fibonacci(9))
+
+print([s.f2(i) for i in range(10)])
+print([s.f3(i) for i in range(10)])

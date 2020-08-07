@@ -8,6 +8,7 @@ def duplicate(nums: list) -> int:
                 num = nums[i]
         return False, None
 
+
 # 排序做法  O(nlogn)
 
 
@@ -23,10 +24,11 @@ def findRepeatNumber1(self, nums):
             return pre
         pre = nums[index]
 
-# 哈希表  O(n)  
+
+# 哈希表  O(n)
 
 
-def findRepeatNumber2(self, nums):
+def findRepeatNumber2(nums):
     """
     :type nums: List[int]
     :rtype: int
@@ -39,10 +41,22 @@ def findRepeatNumber2(self, nums):
         else:
             return i
 
+
+
+
+class Solution:
+    def findRepeatNumber(self, nums: [int]) -> int:
+        i = 0
+        while i < len(nums):
+            if nums[i] == i:
+                i += 1
+                continue
+            if nums[nums[i]] == nums[i]: return nums[i]
+            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+        return -1
+
 # 下表定位
-
-
-def findRepeatNumber3(self, nums):
+def findRepeatNumber3(nums):
     """
     :type nums: List[int]
     :rtype: int
@@ -57,6 +71,9 @@ def findRepeatNumber3(self, nums):
 
 
 a = [1, 2, 3, 4, 4, 5, 5, 6]
-b = [1, 2, 3, 4, 5, 6]
+# b = [1, 2, 3, 4, 5, 6]
 # print(duplicate(a))
-print(duplicate(b))
+print(findRepeatNumber2(a))
+s= Solution()
+s.findRepeatNumber(a)
+print(s.findRepeatNumber(a))
