@@ -8,9 +8,9 @@
 
 def hanoi(n, a, b, c):
     if n > 0:
-        hanoi(n-1, a, c, b)
-        print('moving from to %s to %s' % (a, c))
-        hanoi(n-1, b, a, c)
+        hanoi(n-1, a, c, b)   # 从a 经过 c 移动到 b
+        print('moving from to %s to %s' % (a, c))  # a移动到c
+        hanoi(n-1, b, a, c)   # 从b 经过 a 移动到 c
 
 
 hanoi(3, 'A', 'B', 'C')

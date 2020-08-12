@@ -4,6 +4,7 @@
 .pydevproject
 .idea/
 .idea
+.vscode
 .DS_Store
 .cache
 *.pyc
