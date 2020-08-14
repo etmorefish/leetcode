@@ -19,3 +19,4 @@ l = a.split('.')
 n = int(l[0]) + int(l[1])/(int(('1'+'0'*len(l[1]))))
 # print()
 print(n)
+

@@ -2,6 +2,7 @@
 .settings/
 .prefs
 .pydevproject
+.__pycache__
 .idea/
 .idea
 .vscode
@@ -10,3 +11,6 @@
 *.pyc
 *.html
 *.xlm
+.bak
+.dir
+.dat
