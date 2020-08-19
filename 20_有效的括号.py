@@ -2,8 +2,16 @@
 # @Time    : 19-7-29 下午3:11
 # @Author  : MaoLei
 # @Email   : maolei025@qq.com
-# @File    : 20_Valid Parentheses.py
+# @File    : 20_有效的括号.py
 # @Software: PyCharm
+class Solution:
+    def isValid(self, s: str) -> bool:
+        dic = {'{': '}',  '[': ']', '(': ')', '?': '?'}
+        stack = ['?']
+        for c in s:
+            if c in dic: stack.append(c)
+            elif dic[stack.pop()] != c: return False
+        return len(stack) == 1
 
 class Solution:
     def isValid(self, s):
@@ -12,20 +20,26 @@ class Solution:
             s = s.replace('[]', '')
             s = s.replace('()', '')
         return True
+
     def isValid2(self, s):
+        dic = {')': '(', ']': '[', '}': '{'}
         stack = []
-        mapping = {")": "(", "}": "{", "]": "["}
-        for char in mapping:
-            top = stack.pop() if stack else '#'
-            if mapping[char] != top:
-                return False
+        for i in s:
+            if stack and i in dic:
+                if stack[-1] == dic[i]:
+                    stack.pop()
+                else:
+                    return False
             else:
-                stack.append(char)
-            return not stack
+                stack.append(i)
+
+        return not stack
+
+
 
 if __name__ == '__main__':
     a = Solution()
-    a.isValid2("()[]{}")
+    print(a.isValid2("()[]{}"))
 
 '''
 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -79,4 +93,3 @@ class Solution(object):
 链接：https://leetcode-cn.com/problems/valid-parentheses
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 '''
-

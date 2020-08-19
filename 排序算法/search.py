@@ -13,7 +13,7 @@ def linear_search(li, val):
 
 '''二分查找  O(logn)
 '''
-@cal_time
+# @cal_time
 def binary_search(li, val):
     left = 0
     right = len(li) - 1
@@ -29,7 +29,7 @@ def binary_search(li, val):
         return None
         
 
-# li = [1,2,3,4,5,6,7,8,9]
-li = list(range(10000))
-print(linear_search(li, 9323))
-print(binary_search(li, 9323))
+li = [1,2,3,4,5,6,7,8,9]
+# li = list(range(10000))
+# print(linear_search(li, 9323))
+print(binary_search(li, 9))
