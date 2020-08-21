@@ -18,7 +18,8 @@ def binary_search(li, val):
     left = 0
     right = len(li) - 1
     while left <= right:
-        mid = (left + right) // 2
+        # mid = (left + right) // 2
+        mid = left + (right-left)//2
         if li[mid] == val:
             return mid
         elif li[mid] > val:
