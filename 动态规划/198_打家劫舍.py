@@ -15,9 +15,19 @@ class Solution:
         dp = [0] * len(nums)
         dp[0] = nums[0]
         dp[1] = max(nums[0], nums[1])
-        for i in range(2,len(nums)):
-            dp[i] = max(dp[i-1], dp[i-2]+ nums[i])
+        for i in range(2, len(nums)):
+            dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])
         return dp[-1]
         # return max(dp)
 
-print(Solution().rob([2,7,9,3,1]))
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        cur, pre = 0, 0
+        for num in nums:
+            cur, pre = max(pre + num, cur), cur
+        return cur
+
+
+
+print(Solution().rob([2, 7, 9, 3, 1]))

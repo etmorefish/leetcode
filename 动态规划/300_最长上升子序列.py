@@ -21,9 +21,9 @@ class Solution:
         for i in range(len(nums)):  # 8
             for j in range(i):
                 if nums[j] < nums[i]:
-
                     dp[i] = max(dp[i], dp[j] + 1)
         return max(dp)
+        # return dp
 
 
-print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18]))
+print(Solution().lengthOfLIS([10, 9, 2, 5, 3, 7, 101, 18, 9, 5,3]))

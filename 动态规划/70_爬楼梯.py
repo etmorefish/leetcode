@@ -8,7 +8,7 @@ class Solution:
             ret = 0
             a = 1
             b = 2
-            for i in range(2, n):
+            for i in range(3, n+1):
                 ret = a + b
                 a = b
                 b = ret
@@ -21,5 +21,5 @@ class Solution:
         return a
 
 
-print(Solution().climbStairs(7))
-print(Solution().climbStairs2(7))
+print(Solution().climbStairs(20))
+print(Solution().climbStairs2(2))
