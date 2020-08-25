@@ -25,7 +25,7 @@ class Solution:
         while n:
             print(n, bin(n))
             res += n & 1
-            n >>= 1
+            n >>= 1    # 右移运算符
         return res
 
 s = Solution()

@@ -11,7 +11,7 @@ y+x 1286128
 from functools import cmp_to_key
 
 li = [32, 94, 128, 1286, 6, 71]
-
+# li = [1,1,1]
 
 def xy_cmp(x, y):
     if x + y < y + x:
