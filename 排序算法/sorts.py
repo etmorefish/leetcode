@@ -14,7 +14,7 @@ class Solution(object):
             for j in range(length - i - 1):
                 if arr[j] > arr[j + 1]:
                     arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                    exchange = False
+                    exchange = True
         if not exchange:  # 优化，如果一趟没有发生交换，则说明列表已经有序，结束
             return arr
         # return arr
