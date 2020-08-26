@@ -16,6 +16,14 @@ class Solution:
     def getIntersectionNode(self, headA, headB):
         ha, hb = headA, headB
         while ha != hb:
+            # if ha:
+            #     ha = ha.next
+            # else:
+            #     ha = headB
+            # if hb:
+            #     hb = hb.next
+            # else:
+            #     hb = headA
             ha = ha.next if ha else headB
             hb = hb.next if hb else headA
         return ha

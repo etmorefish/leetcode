@@ -12,3 +12,5 @@ class Solution:
             max_len = max(max_len, end - start + 1)
             mark.append(s[end])
         return max_len
+
+print(Solution().lengthOfLongestSubstring('asdfasdfghas'))
