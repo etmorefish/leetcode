@@ -103,7 +103,7 @@ def f7(k):
     sn = 0
     n = 1
     if k>=1 and k<=15:
-        while sn <= k:
+        while True:
             sn += 1/n
             if sn > k:
                 break
