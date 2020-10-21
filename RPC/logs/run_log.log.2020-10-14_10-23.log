@@ -1,0 +1,2 @@
+2020-10-14 10:23:03,338 - trace.py[line:122] - INFO: Task cc.add[65b55b80-0116-4b85-bea8-48e39acde0eb] succeeded in 16.02939260599669s: 4
+2020-10-14 10:23:49,495 - trace.py[line:122] - INFO: Task cc.add[ffeb3407-d11c-40ce-8762-1f4349b2c009] succeeded in 16.021877213031985s: 4
